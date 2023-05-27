@@ -28,7 +28,8 @@ Resources:
          #! /bin/bash
             yum update -y
             yum install httpd -y
-            FOLDER="https://raw.githubusercontent.com/orhanyucel52/my-projects-aws-14/main/101-kittens-carousel-static-website-ec2/static-web?token=GHSAT0AAAAAACC7B2R44NA3MHK4SECMYWGGZDSNKWQ"
+            TOKEN="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"
+            FOLDER="https://$TOKEN@raw.githubusercontent.com/orhanyucel52/my-projects-aws-14/main/101-kittens-carousel-static-website-ec2/static-web/"
             cd /var/www/html
             wget $FOLDER/index.html
             wget $FOLDER/cat0.jpg
