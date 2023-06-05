@@ -1,0 +1,83 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "This temp launches an EC2 instance which enables SSH.",
+  "Resources": {
+    "MaxCount": 1,
+    "MinCount": 1,
+    "ImageId": "ami-0889a44b331db0194",
+    "InstanceType": "t2.micro",
+    "InstanceInitiatedShutdownBehavior": "stop",
+    "KeyName": "first-key-pair",
+    "DisableApiTermination": false,
+    "EbsOptimized": false,
+    "DisableApiStop": false,
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "Encrypted": false,
+          "DeleteOnTermination": true,
+          "Iops": 3000,
+          "VolumeSize": 8,
+          "VolumeType": "gp3",
+          "Throughput": 125
+        }
+      }
+    ],
+    "NetworkInterfaces": [
+      {
+        "SubnetId": "subnet-038b078356a790091",
+        "DeleteOnTermination": true,
+        "AssociatePublicIpAddress": true,
+        "DeviceIndex": 0,
+        "Groups": [
+          "sg-06859fad8310f3bfd"
+        ]
+      }
+    ],
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "Monitoring": {
+      "Enabled": false
+    },
+    "CreditSpecification": {
+      "CpuCredits": "standard"
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "TagSpecifications": [
+      {
+        "ResourceType": "instance",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "CFNInstance"
+          }
+        ]
+      }
+    ],
+    "Placement": {
+      "Tenancy": "default"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    },
+    "MetadataOptions": {
+      "HttpTokens": "required",
+      "HttpEndpoint": "enabled",
+      "HttpProtocolIpv6": "disabled",
+      "HttpPutResponseHopLimit": 2,
+      "InstanceMetadataTags": "disabled"
+    },
+    "PrivateDnsNameOptions": {
+      "HostnameType": "ip-name",
+      "EnableResourceNameDnsARecord": false,
+      "EnableResourceNameDnsAAAARecord": false
+    },
+    "MaintenanceOptions": {
+      "AutoRecovery": "default"
+    }
+}
+

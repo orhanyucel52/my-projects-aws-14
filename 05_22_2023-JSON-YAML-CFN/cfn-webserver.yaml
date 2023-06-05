@@ -15,7 +15,7 @@ Resources:
     Properties:
       ImageId: ami-0889a44b331db0194
       InstanceType: t2.micro
-      KeyName: Halit-key
+      KeyName: first-key-pair
       SecurityGroups:
         - !Ref CFNSecGr
       Tags:
