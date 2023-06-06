@@ -7,11 +7,11 @@ Description: |
   Roman Numerals Converter Application is downloaded from Github
   repository, then installed on Flask.
 Parameters:
- KeyName:
+  KeyName:
     Description: Enter the name of your Key Pair for SSH connections.
     Type: AWS::EC2::KeyPair::KeyName
 Resources:
-WebServerSecurityGroup:
+  WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable HTTP for Flask Web Server and SSH port to secure connection to my EC2
@@ -24,7 +24,7 @@ WebServerSecurityGroup:
           FromPort: 22
           ToPort: 22
           CidrIp: 0.0.0.0/0
-WebServerHost:
+  WebServerHost:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0bef6cc322bfff646
@@ -50,7 +50,7 @@ WebServerHost:
           python3 app.py
 
 Outputs:
-WebSiteURL:
+  WebSiteURL:
     Value: !Sub
      - http://${PublicAddress}
      - PublicAddress: !GetAtt WebServerHost.PublicDnsName
