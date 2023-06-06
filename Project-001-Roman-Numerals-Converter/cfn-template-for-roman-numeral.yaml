@@ -47,6 +47,7 @@ Resources:
           wget ${FOLDER}/templates/index.html
           wget ${FOLDER}/templates/result.html        
           cd ..
+          chmod +x app.py
           python3 app.py
 
 Outputs:
