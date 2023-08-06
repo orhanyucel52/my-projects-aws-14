@@ -9,8 +9,8 @@ def second():
 @app.route('/third')
 def third():
     return 'This is third page'
-@app.route('/forth/<string:id>')
-def forth(id):
+@app.route('/fourth/<string:id>')
+def fourth(id):
     return f'Id of this page is {id}'
 if __name__ == '__main__':
     # app.run(debug=True)
