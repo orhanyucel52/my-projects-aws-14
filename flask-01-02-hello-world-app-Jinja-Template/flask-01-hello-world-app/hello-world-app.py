@@ -13,5 +13,10 @@ def third():
 def fourth(id):
     return f'Id of this page is {id}'
 if __name__ == '__main__':
+<<<<<<< HEAD
     app.run(debug=True)
     # app.run(host= '0.0.0.0', port=80)
+=======
+    # app.run(debug=True)
+    app.run(host= '0.0.0.0', port=80)
+>>>>>>> 0e1447dac1ea6adf8b306b5d9049bb5610fc574e
