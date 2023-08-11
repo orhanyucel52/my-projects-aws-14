@@ -74,7 +74,7 @@ At the end of the this hands-on training, students will be able to;
 
 ## Part 3 - Install Python and Flask framework on Amazon Linux 2 EC2 Instance 
 
-- Launch an Amazon EC2 instance using the Amazon Linux 2 AMI with security group allowing SSH (Port 22) and HTTP (Port 80) connections.
+- Launch an Amazon EC2 instance using the Amazon Linux 2023 AMI with security group allowing SSH (Port 22) and HTTP (Port 80) connections.
 
 - Connect to your instance with SSH.
 
